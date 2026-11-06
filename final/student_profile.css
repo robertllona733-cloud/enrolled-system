@@ -1,0 +1,49 @@
+
+/* PROFILE CARD */
+.profile-card{
+    background:white;
+    padding:25px;
+    border-radius:14px;
+    width:900px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* TITLE */
+.profile-card h1{
+    text-align:center;
+    color:#0d47a1;
+    margin-bottom:20px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+/* FULL WIDTH */
+.full{
+    grid-column:span 3;
+}
+
+/* ITEMS */
+.grid div{
+    padding:10px;
+    background:#f8fbff;
+    border-radius:8px;
+    font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .grid{
+        grid-template-columns:1fr;
+    }
+}

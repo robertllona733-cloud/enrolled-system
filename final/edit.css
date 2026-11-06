@@ -1,0 +1,202 @@
+
+/* ===== FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+/* ===== BACKGROUND ===== */
+body{
+    background:#eef3f9;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.layout{
+    display:flex;
+}
+
+/* ===== SIDEBAR (CLEAN + MODERN) ===== */
+.sidebar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:210px;              /* compact */
+    height:100vh;
+    background:linear-gradient(180deg,#0d47a1,#1565c0);
+    padding:20px;
+    color:white;
+    box-shadow:4px 0 15px rgba(0,0,0,0.15);
+}
+
+.sidebar h2{
+    text-align:center;
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    margin:10px 0;
+}
+
+.sidebar ul li a{
+    display:block;
+    padding:10px;
+    border-radius:8px;
+    color:#e3f2fd;
+    text-decoration:none;
+    font-size:13px;
+    transition:0.25s;
+}
+
+.sidebar ul li a:hover{
+    background:#1e88e5;
+    transform:translateX(4px);
+}
+
+/* ===== MAIN CONTENT ALIGNMENT FIX ===== */
+.main-content{
+    margin-left:210px;
+    width:calc(100% - 210px);
+    padding:25px;
+    display:flex;
+    justify-content:center;
+}
+
+/* ===== FORM CARD ===== */
+form{
+    width:1000px;
+    background:white;
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ===== TITLE ===== */
+h1{
+    text-align:center;
+    color:#0d47a1;
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+/* ===== GRID ROW ===== */
+.row{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:12px;
+    margin-bottom:12px;
+}
+
+/* ===== FIELD ===== */
+.field{
+    display:flex;
+    flex-direction:column;
+}
+
+/* ===== LABEL ===== */
+label{
+    font-size:12px;
+    font-weight:600;
+    margin-bottom:4px;
+    color:#1e3a8a;
+}
+
+/* ===== INPUT STYLE ===== */
+input, select, textarea{
+    padding:8px 10px;
+    border:1px solid #cbd5e1;
+    border-radius:8px;
+    font-size:13px;
+    background:#f8fbff;
+    transition:0.2s;
+}
+
+/* FOCUS EFFECT */
+input:focus,
+select:focus,
+textarea:focus{
+    outline:none;
+    border-color:#1e88e5;
+    box-shadow:0 0 0 3px rgba(30,136,229,0.15);
+    background:white;
+}
+
+/* TEXTAREA */
+textarea{
+    height:70px;
+    resize:none;
+}
+
+/* FULL WIDTH ELEMENT */
+.full{
+    grid-column:span 3;
+}
+
+/* ===== BUTTON ===== */
+button{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(135deg,#1976d2,#0d47a1);
+    color:white;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(25,118,210,0.3);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+    .row{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    form{
+        width:100%;
+    }
+}
+
+@media(max-width:600px){
+    .row{
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+    }
+
+    .main-content{
+        margin-left:0;
+        width:100%;
+    }
+}
+
+
+/* ===== FULL WIDTH ADDRESS BOX ===== */
+.full-address{
+    grid-column: span 3;   /* makes it wide (full row) */
+}
+
+/* ===== CENTER TEXT INSIDE TEXTAREA ===== */
+.full-address textarea{
+    text-align:center;     /* center text */
+    padding-top:20px;      /* makes it look nicer vertically */
+    font-size:14px;
+}
